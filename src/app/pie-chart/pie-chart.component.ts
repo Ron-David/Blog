@@ -92,8 +92,8 @@ export class PieChartComponent implements OnInit {
 
     this.svg = d3.select('#pieChart')
       .append('svg')
-      .attr('width', '70%')
-      .attr('height', '70%')
+      .attr('width', '60%')
+      .attr('height', '60%')
       .attr('viewBox', '0 0 ' + Math.min(this.width, this.height) + ' ' + Math.min(this.width, this.height))
       .append('g')
       .attr('transform', 'translate(' + Math.min(this.width, this.height) / 2 + ',' + Math.min(this.width, this.height) / 2 + ')');
