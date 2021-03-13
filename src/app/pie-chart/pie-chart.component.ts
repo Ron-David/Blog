@@ -92,8 +92,8 @@ export class PieChartComponent implements OnInit {
 
     this.svg = d3.select('#pieChart')
       .append('svg')
-      .attr('width', '100%')
-      .attr('height', '100%')
+      .attr('width', '70%')
+      .attr('height', '70%')
       .attr('viewBox', '0 0 ' + Math.min(this.width, this.height) + ' ' + Math.min(this.width, this.height))
       .append('g')
       .attr('transform', 'translate(' + Math.min(this.width, this.height) / 2 + ',' + Math.min(this.width, this.height) / 2 + ')');
@@ -108,7 +108,7 @@ export class PieChartComponent implements OnInit {
       .style('fill', (d: any) => this.color(d.data.email) );
     g.append('text').attr('transform', (d: any) => 'translate(' + this.labelArc.centroid(d) + ')')
       .attr('dy', '.35em')
-      .text((d: any) => d.data.email);
+      .text((d: any) => d.data.email).textfont(15);
 
     g.append('text').attr('transform', (d: any) => 'translate(' + this.labelPer.centroid(d) + ')')
       .attr('dy', '.35em')

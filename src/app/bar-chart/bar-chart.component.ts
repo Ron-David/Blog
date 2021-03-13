@@ -56,8 +56,8 @@ export class BarChartComponent implements OnInit {
   initSvg() {
     this.svg = d3.select('#barChart')
       .append('svg')
-      .attr('width', '100%')
-      .attr('height', '100%')
+      .attr('width', '80%')
+      .attr('height', '80%')
       .attr('viewBox', '0 0 900 500');
     this.g = this.svg.append('g')
       .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
